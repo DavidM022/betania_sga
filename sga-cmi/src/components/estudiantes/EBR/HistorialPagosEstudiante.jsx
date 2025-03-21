@@ -117,9 +117,9 @@ const HisotorialPagoEstudiantes = ({ location }) => {
         },
         {
             name: 'IMPORTE',
-            selector: row => `S/. ${row.importe}`,
+            selector: row => `Bs/. ${row.importe}`,
             sortable: true,
-            cellExport: row => `S/. ${row.importe}`,
+            cellExport: row => `Bs/. ${row.importe}`,
             center: true,
             cell: row => (
                 <div>
@@ -132,7 +132,7 @@ const HisotorialPagoEstudiantes = ({ location }) => {
                         rounded="full"
                         color="white"
                     >
-                        S/ {row.importe}
+                        Bs/ {row.importe}
                     </Badge>
                 </div>
             )

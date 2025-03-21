@@ -284,11 +284,11 @@ const ModalRegistrarPago = () => {
     const conceptos = [
         { value: 'PAGO_CONSTANCIA', label: 'PAGO DE CONSTANCIA', articulo: false },
         { value: 'PAGO_RATIFICACION', label: 'PAGO DE RATIFICACION', articulo: false },
-        { value: 'PAGO_ESCUELA_PADRES', label: 'PAGO DE ESCUELA DE PADRES', articulo: false },
-        { value: 'PAGO_BAPES', label: 'PAGO BAPES', articulo: false },
+        { value: 'PAGO_MENSUALIDADES', label: 'PAGO DE MENSUALIDADES', articulo: false },
+
         { value: 'PAGO_CERTIFICADO', label: 'PAGO DE CERTIFICADO', articulo: false },
         { value: 'PAGO_GASTOS_OPERATIVOS', label: 'PAGO DE GASTOS OPERATIVOS', articulo: false },
-        { value: 'PAGO_MENSUALIDADES', label: 'PAGO DE MENSUALIDADES', articulo: false },
+
         { value: 'PAGO_LIBROS', label: 'PAGO DE LIBROS', articulo: false },
         { value: 'PAGO_AGENDA', label: 'PAGO DE AGENDA', articulo: false },
         { value: 'PAGO_CHOMPAS', label: 'PAGO DE CHOMPAS', articulo: true },
@@ -296,7 +296,7 @@ const ModalRegistrarPago = () => {
         { value: 'PAGO_FALDAS', label: 'PAGO DE FALDAS', articulo: true },
         { value: 'PAGO_CORBATAS', label: 'PAGO DE CORBATAS', articulo: true },
         { value: 'PAGO_MEDIAS', label: 'PAGO DE MEDIAS', articulo: true },
-        { value: 'PAGO_BUZOS', label: 'PAGO DE BUZOS', articulo: true },
+        { value: 'PAGO_PANTALON', label: 'PAGO DE PANTALON', articulo: true },
         { value: 'OTROS', label: 'OTROS', articulo: false },
     ]
 

@@ -273,7 +273,7 @@ const AgregarEstudiante = () => {
                             <FormControl>
                                 <FormLabel fontWeight={'semibold'}>COLEGIO DE PROCEDENCIA</FormLabel>
                                 <Input
-                                    placeholder='Ejemplo: MARIA AUXILIADORA'
+                                    placeholder='Ejemplo: Dr. Carlos Montenegro'
                                     type="text"
                                     onChange={(e) => setIndice({ ...indice, colegio_procedencia: e.target.value.toUpperCase() })}
                                     textTransform={'uppercase'}

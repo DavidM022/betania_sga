@@ -123,7 +123,7 @@ export const ModalEditarUniforme = ({ row, categorias }) => {
                                     <FormLabel fontWeight={'semibold'}>PRECIO</FormLabel>
                                     <Input
                                         defaultValue={indice ? indice.precio : ''}
-                                        placeholder="S/.49.90"
+                                        placeholder="Bs"
                                         type="number"
                                         onChange={(e) => setIndice({ ...indice, precio: e.target.value })}
                                     />

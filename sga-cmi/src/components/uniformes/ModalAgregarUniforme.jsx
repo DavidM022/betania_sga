@@ -143,7 +143,7 @@ const ModalAgregarUniforme = ({ categorias }) => {
                                     <FormControl>
                                         <FormLabel fontWeight={'semibold'}>PRECIO</FormLabel>
                                         <Input
-                                            placeholder="S/.49.90"
+                                            placeholder="Bs"
                                             type="number"
                                             onChange={(e) => setIndice({ ...indice, precio: e.target.value })}
                                         />

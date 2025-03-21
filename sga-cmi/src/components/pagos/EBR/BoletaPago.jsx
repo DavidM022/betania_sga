@@ -380,7 +380,7 @@ const BoletaPago = ({ location }) => {
                                                 ) : null
                                             }
                                             <Th></Th>
-                                            <Th color={'black'} fontSize='md' fontWeight={'bold'} fontFamily={'Arial, Helvetica, sans-serif'} > IGV:</Th>
+                                            <Th color={'black'} fontSize='md' fontWeight={'bold'} fontFamily={'Arial, Helvetica, sans-serif'} > IVA:</Th>
                                             <Th color={'black'} isNumeric fontSize='sm' fontWeight={'normal'} fontFamily={'Arial, Helvetica, sans-serif'}>Bs/0.00</Th>
                                         </Tr>
                                         <Tr mt={4}>

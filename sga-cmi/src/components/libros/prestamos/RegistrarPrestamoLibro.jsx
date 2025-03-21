@@ -183,7 +183,7 @@ const RegistrarPrestamoLibro = () => {
                                 >
                                     <Stack direction='row'>
                                         <Radio value={"ESTUDIANTE"}>ESTUDIANTE</Radio>
-                                        <Radio value={"DOCENTE"}>DOCENTE</Radio>
+                                        <Radio value={"DOCENTE"}>PROFESOR</Radio>
                                     </Stack>
                                 </RadioGroup>
                             </FormControl>
@@ -217,7 +217,7 @@ const RegistrarPrestamoLibro = () => {
                             </FormControl>
 
                             <FormControl isRequired={tipoSeleccion === 'DOCENTE'} hidden={tipoSeleccion !== 'DOCENTE'}>
-                                <FormLabel fontWeight="semibold">DOCENTE</FormLabel>
+                                <FormLabel fontWeight="semibold">PROFESOR</FormLabel>
                                 <InputGroup size='md'>
                                     <Input
                                         type={'text'}
