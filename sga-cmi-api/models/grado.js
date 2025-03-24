@@ -13,10 +13,6 @@ const GradoSchema = Schema({
         required: [true, 'El nivel es obligatorio'],
         enum: ['INICIAL', 'PRIMARIA', 'SECUNDARIA', 'OTRO']
     },
-    modalidad: {
-        type: String,
-        required: [true, 'El modalidad es obligatorio']
-    },
     estado: {
         type: Boolean,
         default: true,

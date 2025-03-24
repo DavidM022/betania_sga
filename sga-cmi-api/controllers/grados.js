@@ -7,8 +7,7 @@ const getGrados = async (req, res = response) => {
 
         const sort = { updatedAt: -1 };
 
-        const grados = await Grado.find().populate('modalidad',
-        'nombre descripcion estado createdAt updatedAt').sort(sort);
+        const grados = await Grado.find().sort(sort);
 
         res.json(grados);
 
@@ -29,8 +28,7 @@ const getGrado = async (req, res = response) => {
         
         const sort = { updatedAt: -1 };
 
-        const grado = await Grado.findById(req.params.id).populate('modalidad',
-        'nombre descripcion estado createdAt updatedAt').sort(sort);
+        const grado = await Grado.findById(req.params.id).sort(sort);
 
         res.json(grado);
 
@@ -74,10 +72,7 @@ const crearGrado = async (req, res = response) => {
 
         await grado.save();
 
-        const grados = await grado.populate('modalidad',
-        'nombre descripcion estado createdAt updatedAt');
-
-        res.status(201).json(grados);
+        res.status(201).json(grado);
 
     } catch (error) {
 
@@ -106,8 +101,7 @@ const actualizarGrado = async (req, res = response) => {
 
         const sort = { updatedAt: -1 };
 
-        const gradoActualizado = await Grado.findByIdAndUpdate(req.params.id, nuevoGrado, { new: true }).populate('modalidad',
-        'nombre descripcion estado createdAt updatedAt').sort(sort);
+        const gradoActualizado = await Grado.findByIdAndUpdate(req.params.id, nuevoGrado, { new: true }).sort(sort);
 
         res.json(gradoActualizado);
 
