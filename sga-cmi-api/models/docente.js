@@ -15,7 +15,6 @@ const DocenteSchema = Schema({
     },
     correo: {
         type: String,
-        unique: true,
     },
     celular : {
         type: String,

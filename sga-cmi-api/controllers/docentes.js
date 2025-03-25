@@ -54,9 +54,7 @@ const registrarDocente = async (req, res = response) => {
     
         try {
     
-            const { nombres, apellidos, dni, correo, celular, fecha_nacimiento, fecha_contratacion, fecha_retiro, direccion, observacion, estado } = req.body;
-    
-            const docentesDB = await Docente.findOne({ dni });
+            const docentesDB = await Docente.findOne({ dni: req.body.dni });
             
             if (docentesDB) {
                 return res.status(400).json({
@@ -65,21 +63,7 @@ const registrarDocente = async (req, res = response) => {
                 });
             }
     
-            const data = {
-                nombres, 
-                apellidos, 
-                dni,
-                correo,
-                celular,
-                fecha_nacimiento,
-                fecha_contratacion,
-                fecha_retiro,
-                direccion,
-                observacion,
-                estado
-            }
-    
-            const docente = new Docente(data);
+            const docente = new Docente(req.body);
     
             await docente.save();
 
@@ -101,23 +85,8 @@ const actualizarDocente = async (req, res = response) => {
     try {
 
         const { id } = req.params;
-        const { nombres, apellidos, dni, correo, celular, fecha_nacimiento, fecha_contratacion, fecha_retiro, direccion, observacion, estado } = req.body;
 
-        const data = {
-            nombres, 
-            apellidos, 
-            dni,
-            correo,
-            celular,
-            fecha_nacimiento,
-            fecha_contratacion,
-            fecha_retiro,
-            direccion,
-            observacion,
-            estado
-        }
-
-        const docenteActualizado = await Docente.findByIdAndUpdate(id, data, { new: true });
+        const docenteActualizado = await Docente.findByIdAndUpdate(id, req.body, { new: true });
 
         res.json(docenteActualizado);
 
