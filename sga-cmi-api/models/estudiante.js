@@ -19,11 +19,6 @@ const EstudianteSchema = Schema({
         default: 'M',
         required: [true, 'El sexo es obligatorio']
     },
-    modalidad: {
-        type: String,
-        enum: ['EBR', 'CEBA'],
-        required: [true, 'La modalidad es obligatoria'],
-    },
     correo: {
         type: String,
     },
@@ -47,11 +42,6 @@ const EstudianteSchema = Schema({
     },
     colegio_procedencia: {
         type: String,
-    },
-    tipo_estudiante: {
-        type: String,
-        enum: ['RESIDENCIA', 'EXTERNA', 'OTRO'],
-        required: [true, 'El tipo de estudiante es obligatorio'],
     },
     grado: {
         type: Schema.Types.ObjectId,

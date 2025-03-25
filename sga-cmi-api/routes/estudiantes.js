@@ -32,12 +32,10 @@ router.post('/', [
     validarADMIN_ROLE,
     check('nombres', 'Los nombres son obligatorios').not().isEmpty(),
     check('apellidos', 'Los apellidos son obligatorios').not().isEmpty(),
-    check('dn i', 'El dni son obligatorios').not().isEmpty(),
+    check('dni', 'El dni son obligatorios').not().isEmpty(),
     check('sexo', 'El sexo es obligatorio').not().isEmpty(),
-    check('tipo_estudiante', 'El tipo de estudiante es obligatorio').not().isEmpty(),
     check('turno', 'El turno es obligatorio').not().isEmpty(),
     check('estado', 'El estado es obligatorio').not().isEmpty(),
-    check('modalidad', 'La modalidad es obligatorio').not().isEmpty(),
     validarCampos,
 ] , registrarEstudiante);
 
